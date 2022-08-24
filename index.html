@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <title>Weather App</title>
+    </head>
+    <body>
+        <main data-theme="light" class="container" id="container">
+            <div class="weather" id="weather">
+                <div class="title" id="title"><h1>Weather</h1></div>
+                <div class="search-container" id="search-container">
+                    <div class="search-bar" id="search-bar">
+                        <input type="text" id="city" placeholder="Enter city" />
+                        <button id="search">Search</button>
+                    </div>
+                    <div class="search-error" id="search-error">
+                        <p class="error hide" id="error"></p>
+                    </div>
+                    <div class="search-result" id="search-result"></div>
+                </div>
+
+                <div class="display-container" id="display-container">
+                    <div class="card-container">
+                        <div class="card card1">
+                            <div class="locale-time">
+                                <p class="locale" id="locale"></p>
+                                <p class="time" id="time"></p>
+                            </div>
+                            <div class="format">
+                                <div class="units">
+                                    <h3>Units</h3>
+                                    <button id="units">Metric</button>
+                                </div>
+                                <div class="times">
+                                    <h3>Time</h3>
+                                    <button id="times">12 Hr</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card card2">
+                            <div class="weather-info">
+                                <div class="weather-visual" id="weather-visual"></div>
+                                <div class="temp-info">
+                                    <p class="visual-desc" id="visual-desc"></p>
+                                    <h1 class="temp" id="temp"></h1>
+                                    <p class="feels-like" id="feels-like"></p>
+                                </div>
+                            </div>
+                            <div class="temp-delta">
+                                <div class="temp-high" id="temp-high"></div>
+                                <div class="temp-low" id="temp-low"></div>
+                            </div>
+                        </div>
+
+                        <div class="card card3">
+                            <div class="details">
+                                <h2>Details</h2>
+                                <div class="details-body" id="details"></div>
+                            </div>
+                            <div class="wind-plant">
+                                <div class="wind">
+                                    <h2>Wind</h2>
+                                    <div class="wind-body" id="wind"></div>
+                                </div>
+                                <lottie-player
+                                    src="./assets/windy-plant.json"
+                                    background="transparent"
+                                    speed="1"
+                                    loop
+                                    autoplay
+                                ></lottie-player>
+                            </div>
+                        </div>
+
+                        <div class="card card4">
+                            <div class="sunrise-sunset">
+                                <div>
+                                    <p>Sunrise</p>
+                                    <h2 id="sunrise"></h2>
+                                </div>
+                                <div>
+                                    <p>Sunset</p>
+                                    <h2 id="sunset"></h2>
+                                </div>
+                            </div>
+                            <div class="progress-bar" id="progress-bar">
+                                <div class="line">
+                                    <lottie-player
+                                        class="line-head"
+                                        id="line-head"
+                                        src="./assets/sun-head.json"
+                                        background="transparent"
+                                        speed="1"
+                                        loop
+                                        autoplay
+                                    >
+                                    </lottie-player>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
